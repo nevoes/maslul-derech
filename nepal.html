@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="he" data-theme="light"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>אל הלב של נפאל</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -344,6 +344,9 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 .np-lead img{width:100%;border-radius:18px;aspect-ratio:4/3;object-fit:cover}
 .np-lead h2{margin:6px 0 12px}
 .btn-line-dark{border:1.5px solid var(--navy);color:var(--navy)}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn-line-dark{border-color:var(--on-navy);color:var(--on-navy)}}
+:root[data-theme="dark"] .btn-line-dark{border-color:var(--on-navy);color:var(--on-navy)}
+
 @media (max-width:760px){.reels{grid-template-columns:1fr;max-width:300px}.np-lead{grid-template-columns:1fr!important}}
 
 .np-areas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 40px}.np-areas .sec-head{grid-column:1/-1}

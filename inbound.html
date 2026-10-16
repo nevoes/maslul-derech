@@ -1,4 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html><html lang="he" data-theme="light"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>תיירות נכנסת</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -334,6 +334,10 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 .vid-tabs{display:flex;gap:8px;margin-top:18px}
 .vid-tabs button{font:inherit;font-weight:700;padding:8px 18px;border-radius:999px;border:1.5px solid var(--navy);background:transparent;color:var(--navy);cursor:pointer}
 .vid-tabs button.on{background:var(--navy);color:#fff}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .vid-tabs button{border-color:var(--on-navy);color:var(--on-navy)} :root:not([data-theme="light"]) .vid-tabs button.on{background:var(--on-navy);color:var(--navy)}}
+:root[data-theme="dark"] .vid-tabs button{border-color:var(--on-navy);color:var(--on-navy)}
+:root[data-theme="dark"] .vid-tabs button.on{background:var(--on-navy);color:var(--navy)}
+
 @media (max-width:760px){.vid-split{grid-template-columns:1fr}.vid-box{max-width:320px;margin-inline:auto}}
 .stops.stops3{grid-template-columns:repeat(3,minmax(0,1fr))}@media (max-width:760px){.stops.stops3{grid-template-columns:1fr}}
 
