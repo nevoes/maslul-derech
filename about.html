@@ -379,6 +379,35 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 </svg>
 
 <script>try{if("scrollRestoration" in history)history.scrollRestoration="manual";}catch(e){}if(!location.hash){window.scrollTo(0,0);window.addEventListener("load",function(){window.scrollTo(0,0);});}</script>
+<style id="anim-css">
+/* Gentle animations (approved 17.10) */
+.top{transition:box-shadow .3s}
+.top.scrolled{box-shadow:0 6px 18px -12px rgba(6,27,68,.45)}
+.home-hero{isolation:isolate}
+.home-hero::before{content:"";position:absolute;inset:0;background:inherit;z-index:-1;transform-origin:30% 60%;animation:kb 24s ease-out both}
+@keyframes kb{from{transform:scale(1)}to{transform:scale(1.09)}}
+.hero .wrap>*{animation:up .8s cubic-bezier(.2,.7,.2,1) both}
+.hero .wrap>*:nth-child(2){animation-delay:.12s}
+.hero .wrap>*:nth-child(3){animation-delay:.24s}
+.hero .wrap>*:nth-child(4){animation-delay:.36s}
+.hero .wrap>*:nth-child(n+5){animation-delay:.48s}
+@keyframes up{from{opacity:0;translate:0 18px}to{opacity:1;translate:0 0}}
+.anim .rv{opacity:0;translate:0 26px;transition:opacity .7s ease,translate .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.anim .rv.in{opacity:1;translate:0 0}
+.fl .ph-img,.card .ph-img,.fl-img,.card-img{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+@media (hover:hover){.fl:hover .ph-img,.card:hover .ph-img,.fl:hover .fl-img,.card-fig:hover .card-img{transform:scale(1.05)}}
+.has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{animation:subIn .22s ease-out}
+@keyframes subIn{from{opacity:0;translate:0 -6px}to{opacity:1;translate:0 0}}
+.wa-float::after{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid #25D366;opacity:0;pointer-events:none;animation:ring 1.6s ease-out 2.2s 2}
+@keyframes ring{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(1.6)}}
+.btn{transition:transform .2s,background .2s,box-shadow .2s}
+.btn-orange:hover{box-shadow:0 8px 18px -8px rgba(247,131,10,.7)}
+@media (prefers-reduced-motion:reduce){
+  .home-hero::before,.hero .wrap>*,.wa-float::after,.sub{animation:none!important}
+  .anim .rv{opacity:1;translate:none;transition:none}
+}
+</style>
+
 <header class="top">
   <div class="wrap">
     <a class="brand" href="index.html"><img src="logo.png" alt="מסלול ודרך – חוויה. ערכים. קהילה." width="70" height="60"></a>
@@ -553,4 +582,28 @@ if(mb){new MutationObserver(function(){document.body.classList.toggle('menu-open
 function u(){n.classList.toggle('more',!n.hidden&&n.scrollHeight-n.scrollTop-n.clientHeight>8);}
 n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,{attributes:true,subtree:true,attributeFilter:['class','hidden']});window.addEventListener('resize',u);u();})();
 </script>
+<script id="anim-js">
+(function(){
+  var top=document.querySelector('.top');
+  function sc(){top&&top.classList.toggle('scrolled',window.scrollY>8);}
+  window.addEventListener('scroll',sc,{passive:true});sc();
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var els=[];
+  document.querySelectorAll('main section:not(.hero) .wrap').forEach(function(w){
+    if(w.parentElement.closest('.wrap'))return;
+    Array.prototype.forEach.call(w.children,function(c){
+      if(/^(SCRIPT|STYLE)$/.test(c.tagName))return;
+      var d=getComputedStyle(c).display,k=c.children;
+      if((d==='grid'||d==='flex')&&k.length>1&&k.length<=12&&!c.matches('.actions,.sec-head,.txt')){
+        Array.prototype.forEach.call(k,function(x,i){x.classList.add('rv');x.style.setProperty('--d',(i%3)*0.12+'s');els.push(x);});
+      }else{c.classList.add('rv');els.push(c);}
+    });
+  });
+  document.documentElement.classList.add('anim');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{rootMargin:'0px 0px -6% 0px',threshold:0});
+  els.forEach(function(el){io.observe(el);});
+  setTimeout(function(){els.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight)el.classList.add('in');});},1200);
+})();
+</script>
+
 </body></html>
