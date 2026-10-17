@@ -475,7 +475,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 
 
 <main class="themed">
-  <section class="hero s-hero photo-hero" style="padding:0;background-image:linear-gradient(90deg,rgba(6,20,51,.1),rgba(6,20,51,.88) 62%),url('nepal-hero.jpg');background-position:left center">
+  <section class="hero s-hero photo-hero hs" style="padding:0;background-image:linear-gradient(90deg,rgba(16,18,50,0.05) 0,rgba(16,18,50,0.88) 62%),url('nepal-hero.jpg');background-position:left center">
     <div class="wrap">
       <span class="crumbs"><a href="index.html">בית</a> › נפאל</span>
       <span class="eyebrow">טיול מאורגן · 31 במרץ – 11 באפריל 2027</span>
@@ -622,6 +622,7 @@ if(mb){new MutationObserver(function(){document.body.classList.toggle('menu-open
 function u(){n.classList.toggle('more',!n.hidden&&n.scrollHeight-n.scrollTop-n.clientHeight>8);}
 n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,{attributes:true,subtree:true,attributeFilter:['class','hidden']});window.addEventListener('resize',u);u();})();
 </script>
+<style id="hero-shade">.hero.hs{background-color:rgb(16,18,50)}@media (max-width:820px){.hero.hs{background-image:linear-gradient(90deg,rgba(16,18,50,0.4) 0,rgba(16,18,50,0.92) 70%),url('nepal-hero.jpg')!important}}</style>
 <script id="anim-js">
 (function(){
   var top=document.querySelector('.top');
