@@ -375,6 +375,17 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 .steps3{grid-template-columns:1fr}
 @media (max-width:760px){.steps3{grid-template-columns:1fr}}
 
+
+/* real stories from the field */
+.stories{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.story{margin:0;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:grid;grid-template-rows:auto 1fr;box-shadow:0 18px 40px -30px rgba(10,25,60,.5)}
+.story .ph,.story>img{width:100%;aspect-ratio:4/3;border-radius:0;border-width:0 0 2px 0;object-fit:cover;display:block}
+.story .txt{padding:clamp(20px,3vw,30px);display:grid;gap:10px;align-content:start}
+.story h3{font-size:clamp(1.3rem,2.4vw,1.6rem)}
+.story p{color:var(--muted);margin:0}
+.story .where{font-size:.88rem;color:var(--orange-ink);font-weight:700}
+@media (max-width:760px){.stories{grid-template-columns:1fr}}
+.mission-lead{font-weight:700;margin:4px 0 -4px}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -479,27 +490,57 @@ section{padding-block:clamp(40px,5.5vw,72px)}
     </div>
   </section>
 
-  <section class="band" id="mitzvah">
+  <section class="band" id="stories">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">מהשטח</span>
+        <h2>ככה זה נראה אצלי</h2>
+        <p>שני טיולים שבניתי למשפחה שלי, כדוגמה למה שאפשר לבנות גם בשבילכם.</p>
+      </div>
+      <div class="stories">
+        <figure class="story">
+          <div class="ph need"><span>כאן צריך להשלים תמונה: הטיול עם הבת בעקבות "לאהוב עד מוות"</span></div>
+          <figcaption class="txt">
+            <span class="kicker">בעקבות ספר</span>
+            <h3>אני והבת שלי, בעקבות "לאהוב עד מוות"</h3>
+            <p>יצאתי עם הבת הבכורה שלי בעקבות הספר של דבורה עומר על שרה אהרונסון וניל"י. קראנו קטעים מהספר בדיוק במקומות שבהם הם קרו, והסיפור קם לחיים מול העיניים.</p>
+          </figcaption>
+        </figure>
+        <figure class="story">
+          <div class="ph need"><span>כאן צריך להשלים תמונה: יום ההולדת ה־80 בבן שמן</span></div>
+          <figcaption class="txt">
+            <span class="kicker">יום הולדת עגול</span>
+            <h3>80 לאמא שלי, בכפר הנוער בן שמן</h3>
+            <p>את יום ההולדת ה־80 של אמא שלי חגגנו בסיור בכפר הנוער בן שמן. תיאמתי מראש עם הארכיונאית של הכפר, וכך הסיור קיבל עומק של סיפורים מהארכיון, והמשפחה כולה חוותה יחד את הסיפור.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="mitzvah">
     <div class="wrap">
       <a class="feature" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%91%D7%A0%D7%95%D7%AA%20%D7%98%D7%99%D7%95%D7%9C%20%D7%9E%D7%99%D7%95%D7%97%D7%93.%0A%0A%D7%94%D7%90%D7%99%D7%A8%D7%95%D7%A2%3A%20%0A%D7%9E%D7%99%20%D7%9E%D7%A9%D7%AA%D7%AA%D7%A3%3A%20%0A%D7%AA%D7%90%D7%A8%D7%99%D7%9A%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20">
         <img src="celebrate-mitzvah.jpg" alt="הורה וילד בתצפית מעל העמק" loading="lazy" style="object-position:center 60%">
         <div class="txt">
           <span class="kicker">לגילאי 11–14 ובני משפחותיהם</span>
           <h3>שנת בר/בת מצווה</h3>
-          <p>טיול אחד או סדרה לאורך השנה, שאני בונה במיוחד בשבילכם: אב ובן, אם ובת או כל המשפחה. הרבה ערך וחיבור, כדי להפוך את השנה הזו לשנה מיוחדת במינה.</p>
+          <p><b style="color:var(--ink)">בוחרים משימה, ערך או תכונה שחשובים לכם, ואני הופך אותם ליום טיול מלא עניין, חוויה, ו... ערך, כמובן.</b></p>
+          <p>טיול אחד או כמה לאורך השנה: אב ובן, אם ובת או כל המשפחה, כדי שהשנה הזו תהיה מיוחדת במינה.</p>
+          <p class="mission-lead">לדוגמה:</p>
           <ul class="mission">
             <li><b>משימת אומץ</b><span>פעילות שמשלבת סנפלינג</span></li>
             <li><b>משימת מורשת והיסטוריה</b><span>יום בירושלים</span></li>
             <li><b>משימת ילד מוביל</b><span>הילד עוזר להורה לעבור אתגר</span></li>
           </ul>
-          <p style="font-size:.95rem">ועוד משימות לפי הילד, המשפחה והחלומות שלכם.</p>
+          <p style="font-size:.95rem">אלה רק דוגמאות. המשימה שלכם יכולה להיות כל דבר שחשוב לכם.</p>
           <span class="btn btn-orange" style="justify-self:start">לתכנון שנת המצווה</span>
         </div>
       </a>
     </div>
   </section>
 
-  <section>
+  <section class="band">
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow">איך זה עובד</span>
