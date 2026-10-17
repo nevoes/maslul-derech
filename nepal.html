@@ -394,6 +394,15 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 .themed .sec-head .eyebrow{color:var(--tint-ink)}
 :root[data-theme="dark"] .themed{--tint:#16202B;--tint-ink:#9BB8D6}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .themed{--tint:#16202B;--tint-ink:#9BB8D6}}
+
+/* phone menu: two columns + scroll hint */
+.nav-hint{display:none}
+@media (max-width:1060px){
+  .has-sub.open .sub{grid-template-columns:1fr 1fr!important;gap:4px 18px!important;padding:2px 0 8px!important}
+  .sub a{padding-block:6px!important;font-size:.93rem!important;line-height:1.35}
+  nav>ul>li>a,.sub-btn{padding-block:9px!important}
+  nav.more .nav-hint{display:block;position:sticky;bottom:0;margin-top:-40px;padding:22px 0 10px;text-align:center;font-weight:800;font-size:.85rem;color:var(--orange-ink);background:linear-gradient(rgba(255,255,255,0),var(--surface) 55%);pointer-events:none}
+}
 </style>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -413,7 +422,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
         <li class="has-sub"><span class="sub-btn" tabindex="0">טיולים <span aria-hidden="true">▾</span></span>
           <div class="sub">
             <div><b>לפי קהל</b><ul><li><a href="families.html">משפחות</a></li><li><a href="seniors.html">גיל שלישי</a></li><li><a href="groups.html">ועדים, מורים וחברים</a></li><li><a href="youth.html">נוער מהארץ ומחו"ל</a></li><li><a href="inbound.html">תיירות נכנסת</a></li><li><a href="soldiers.html">חיילים ויחידות</a></li></ul></div>
-            <div><b>הסיורים שלנו</b><ul><li><a href="tanach-tashach.html">מתנ"ך ועד תש"ח · 5 סיורים</a></li><li><a href="sejera.html">בעקבות בן גוריון בסג'רה</a></li><li><a href="stars.html">לילה של כוכבים ועקרבים</a></li><li><a href="tavor.html">נחל תבור</a></li><li><a href="activities.html">פעילויות נוספות לכל טיול</a></li></ul></div>
+            <div><b>הסיורים שלנו</b><ul><li><a href="tanach-tashach.html">מתנ"ך ועד תש"ח · 5 סיורים</a></li><li><a href="sejera.html">בעקבות בן גוריון בסג'רה</a></li><li><a href="stars.html">לילה של כוכבים ועקרבים</a></li><li><a href="tavor.html">נחל תבור</a></li><li><a href="activities.html">פעילויות נוספות לכל טיול</a></li><li><a href="celebrate.html">טיולים בהתאמה אישית</a></li></ul></div>
           </div>
         </li>
         <li><a href="nepal.html">נפאל</a></li>
@@ -579,4 +588,9 @@ if(mb){new MutationObserver(function(){document.body.classList.toggle('menu-open
 })();
 </script>
 
+<script>
+(function(){var n=document.getElementById('nav');if(!n)return;var h=document.createElement('div');h.className='nav-hint';h.setAttribute('aria-hidden','true');h.textContent=document.documentElement.lang==='en'?'▾ More below':'▾ גללו לעוד';n.appendChild(h);
+function u(){n.classList.toggle('more',!n.hidden&&n.scrollHeight-n.scrollTop-n.clientHeight>8);}
+n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,{attributes:true,subtree:true,attributeFilter:['class','hidden']});window.addEventListener('resize',u);u();})();
+</script>
 </body></html>
