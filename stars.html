@@ -564,7 +564,7 @@ if(mb){new MutationObserver(function(){document.body.classList.toggle('menu-open
 function u(){n.classList.toggle('more',!n.hidden&&n.scrollHeight-n.scrollTop-n.clientHeight>8);}
 n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,{attributes:true,subtree:true,attributeFilter:['class','hidden']});window.addEventListener('resize',u);u();})();
 </script>
-<script id="anim-js">
+<style id="mobile-type">@media (max-width:820px){body{font-size:1.125rem}.tag,.ai-tag,.hot,.lvl,.kicker,.aud-chip,.sub b,.f-photo,.credit{font-size:.875rem!important}.meta li,.eg small,.g-badge small,.sub small,.post small,.ph span,.hero-ph,.eyebrow,.card-fig figcaption,.night-trio figcaption,.reel figcaption,.rows .k,.preview b,.crumbs,.facts small,.story .where,.sub-btn span,nav.more .nav-hint{font-size:.9375rem!important}}</style><script id="anim-js">
 (function(){
   var top=document.querySelector('.top');
   function sc(){top&&top.classList.toggle('scrolled',window.scrollY>8);}
