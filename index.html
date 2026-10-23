@@ -131,6 +131,7 @@ section{padding-block:clamp(56px,8vw,96px)}
 @media (max-width:560px){.aud{grid-template-columns:1fr}}
 
 /* About */
+.about-pics{display:grid;gap:14px;min-width:0}.about-pics .ph-img{width:100%;aspect-ratio:3/2!important;object-fit:cover}
 .about{display:grid;grid-template-columns:5fr 6fr;gap:clamp(28px,5vw,64px);align-items:center}
 .about .ph{aspect-ratio:4/5}
 .about blockquote{font-family:var(--display);font-size:clamp(1.3rem,2.4vw,1.7rem);line-height:1.45;margin:0;color:var(--navy);border-inline-start:4px solid var(--orange-hi);padding-inline-start:18px}
@@ -446,7 +447,7 @@ footer.site .social a{background:transparent;border-color:#33415F;color:#E2E7F0}
 
   <section id="about">
     <div class="wrap about">
-      <img class="ph-img" src="eshed-sejera-guiding.jpg" alt="אשד מדריך קבוצה בחצר חוות השומר בסג׳רה" loading="lazy" style="object-position:70% 50%">
+      <div class="about-pics"><img class="ph-img" src="eshed-sejera-guiding.jpg" alt="אשד מדריך קבוצה בחצר חוות השומר בסג׳רה" loading="lazy" style="object-position:70% 50%"><img class="ph-img" src="eshed-family-olives.jpg" alt="אשד עם משפחה בטיול בכרם זיתים" loading="lazy"></div>
       <div class="txt">
         <span class="eyebrow" style="color:var(--orange-ink)">נעים להכיר</span>
         <h2>אשד נבו</h2>
