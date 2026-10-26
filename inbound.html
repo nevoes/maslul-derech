@@ -8,13 +8,14 @@
 <meta property="og:locale" content="he_IL">
 <meta property="og:title" content="תיירות נכנסת – מסלול ודרך">
 <meta property="og:description" content="מארחים קבוצה מחו&quot;ל? הדרכה באנגלית לקבוצות ומשלחות בכל רחבי הארץ, מהגליל ועד ירושלים, עם סיפורים שמחברים אותם למקום.">
-<meta property="og:url" content="https://maslul-derech.co.il/inbound.html">
-<meta property="og:image" content="https://maslul-derech.co.il/share-inbound-kinneret.jpg">
+<meta property="og:url" content="https://www.maslul-derech.co.il/inbound.html">
+<meta property="og:image" content="https://www.maslul-derech.co.il/share-inbound-kinneret.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="canonical" href="https://maslul-derech.co.il/inbound.html">
-</head><body>
+<link rel="canonical" href="https://www.maslul-derech.co.il/inbound.html">
+<style>.skip{position:absolute;inset-inline-start:8px;top:-60px;z-index:1000;background:#0A2A66;color:#fff;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none}.skip:focus{top:8px}</style>
+</head><body><a class="skip" href="#main">דילוג לתוכן</a>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=Assistant:wght@400;600;700;800&display=swap">
 <style>
@@ -470,7 +471,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 </header>
 
 
-<main class="themed">
+<main id="main" class="themed">
   <section class="hero s-hero photo-hero hs" style="padding:0;background-image:linear-gradient(90deg,rgba(45,30,12,0.05) 0,rgba(45,30,12,0.88) 62%),url('inbound-kinneret.jpg');background-position:left center">
     <div class="wrap">
       <span class="crumbs"><a href="index.html">בית</a> › <a href="index.html#trips">הטיולים שלנו</a> › תיירות נכנסת</span>
@@ -509,9 +510,9 @@ section{padding-block:clamp(40px,5.5vw,72px)}
         <span class="eyebrow" style="color:var(--orange-ink)">מהשטח</span>
         <h2>שבוע עם משלחת מדרום אפריקה</h2>
         <p>49 אורחי משרד החוץ, שמונה ימים בארץ. מירושלים דרך הגליל ועד תל אביב, עם הרבה סיפורים, שירה וריקודים.</p>
-        <div class="vid-tabs" role="tablist">
-          <button class="on" data-v="he">עברית</button>
-          <button data-v="en">English</button>
+        <div class="vid-tabs" role="group" aria-label="שפת הסרטון">
+          <button type="button" class="on" aria-pressed="true" data-v="he">עברית</button>
+          <button type="button" aria-pressed="false" data-v="en">English</button>
       </div>
         
       <figure class="one-quote sa-quote" style="margin:28px 0 0">
@@ -543,7 +544,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 </main>
 <script>
 document.querySelectorAll('.vid-tabs button').forEach(b=>b.onclick=()=>{
-  document.querySelectorAll('.vid-tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.vid-tabs button').forEach(x=>{x.classList.toggle('on',x===b);x.setAttribute('aria-pressed',x===b)});
   const v=document.getElementById('reel'),l=b.dataset.v;
   v.pause();v.poster='inbound-poster-'+l+'.jpg';v.querySelector('source').src='inbound-reel-'+l+'.mp4';v.load();
 });
@@ -617,4 +618,5 @@ n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,
 })();
 </script>
 
+<script data-goatcounter="https://maslul-derech.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body></html>
