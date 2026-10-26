@@ -514,10 +514,8 @@ section{padding-block:clamp(40px,5.5vw,72px)}
   <section>
     <div class="wrap">
       <div class="cgrid">
-        <form class="cform" id="cform" action="https://formsubmit.co/maslul.derech@gmail.com" method="POST">
+        <form class="cform" id="cform" action="https://docs.google.com/forms/d/e/1FAIpQLSfy2vdxFqYlAycx76QnnMxlKxd4201jE2Wq3uhOMBg70QBZrg/formResponse" method="POST">
           <h2>השאירו פרטים ואחזור אליכם</h2>
-          <input type="hidden" name="_subject" value="פנייה חדשה מאתר מסלול ודרך">
-          <input type="hidden" name="_template" value="table">
           <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
           <div class="row2">
             <label>שם<input name="שם" required autocomplete="name"></label>
@@ -531,6 +529,11 @@ section{padding-block:clamp(40px,5.5vw,72px)}
             </label>
             <label>מספר משתתפים<input name="מספר משתתפים" inputmode="numeric"></label>
           </div>
+          <label>איך הגעתם אליי?
+            <select name="איך הגעת">
+              <option value="">בחרו (לא חובה)</option><option>חיפוש בגוגל</option><option>המלצה מפי חבר/קולגה</option><option>פייסבוק / רשתות חברתיות</option><option>ווטסאפ</option><option>השתתפתי בטיול בעבר</option><option>אחר</option>
+            </select>
+          </label>
           <label>מה תרצו לספר לי?<textarea name="הודעה" rows="4" placeholder="תאריך משוער, איזה טיול מעניין אתכם, כל מה שחשוב"></textarea></label>
           <button class="btn btn-orange" type="submit">שליחה</button>
           <p class="form-msg" id="formMsg" role="status" hidden></p>
@@ -582,8 +585,14 @@ section{padding-block:clamp(40px,5.5vw,72px)}
   f.addEventListener('submit',function(e){
     e.preventDefault(); if(f._honey&&f._honey.value)return;
     var b=f.querySelector('button[type=submit]'); b.disabled=true; b.textContent='שולח...';
-    fetch('https://formsubmit.co/ajax/maslul.derech@gmail.com',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
-    .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=='true')throw 0;});})
+    // Responses go into the Google Form "פנייה מאתר מסלול ודרך" (and its response sheet).
+    var E={'שם':'entry.630667005','טלפון':'entry.588952401','סוג הקבוצה':'entry.692730350','מספר משתתפים':'entry.1919884604','הודעה':'entry.1731134878'};
+    var SRC='entry.839953011', GF_OPTS=['חיפוש בגוגל','המלצה מפי חבר/קולגה','פייסבוק / רשתות חברתיות','ווטסאפ'];
+    var d=new URLSearchParams();
+    Object.keys(E).forEach(function(k){var el=f.elements[k];if(el&&el.value.trim())d.append(E[k],el.value.trim());});
+    var src=f.elements['איך הגעת'].value;
+    if(src){if(GF_OPTS.indexOf(src)>-1)d.append(SRC,src);else{d.append(SRC,'__other_option__');d.append(SRC+'.other_option_response',src);}}
+    fetch(f.action,{method:'POST',mode:'no-cors',body:d})
     .then(function(){m.hidden=false;m.className='form-msg ok';m.textContent='תודה! הפרטים התקבלו, ואחזור אליכם בהקדם.';f.reset();})
     .catch(function(){m.hidden=false;m.className='form-msg err';m.innerHTML='השליחה לא הצליחה. אפשר לשלוח את אותם פרטים <a href="'+wa()+'" target="_blank" rel="noopener">בווטסאפ בלחיצה אחת</a>.';})
     .finally(function(){b.disabled=false;b.textContent='שליחה';});
