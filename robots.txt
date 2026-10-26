@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /partials/
+Disallow: /tools/
+Disallow: /CLAUDE
 
 Sitemap: https://www.maslul-derech.co.il/sitemap.xml
