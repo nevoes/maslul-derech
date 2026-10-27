@@ -667,11 +667,15 @@ section{padding-block:clamp(40px,5.5vw,72px)}
         <span class="nh-rule"></span>
       </div>
       <p class="nh-sub">המלצות מטיולים קודמים שהדרכתי ברחבי הארץ.</p>
+      <div class="nh-revcar">
+      <button class="car-btn prev" type="button" aria-label="ההמלצה הקודמת">›</button>
+      <button class="car-btn next" type="button" aria-label="ההמלצה הבאה">‹</button>
       <div class="nh-revs">
         <div class="nh-rev"><div class="nh-rq"><svg viewBox="0 0 24 24"><path d="M10 7H6a2 2 0 0 0-2 2v4h5v5H4M20 7h-4a2 2 0 0 0-2 2v4h5v5h-5"/></svg><p>כבר סיור שני שלי עם אשד נבו, ואני ממליצה עליו בחום! <b>אשד מקצועי, נעים, מאורגן ודואג לכל הפרטים הקטנים והגדולים.</b> לכל סיור או טיול יש ערך מוסף. כדאי כדאי ממש.</p></div><div class="nh-stars" aria-label="5 כוכבים">★★★★★</div><p class="nh-who">אורנה צוקר<span> · חיפה</span></p></div>
         <div class="nh-rev"><div class="nh-rq"><svg viewBox="0 0 24 24"><path d="M10 7H6a2 2 0 0 0-2 2v4h5v5H4M20 7h-4a2 2 0 0 0-2 2v4h5v5h-5"/></svg><p>אשד לא רק בעל ידע רב, אלא גם <b>בעל כישרון מיוחד להסתגל ולהתחבר לסוגים שונים של אנשים.</b> הוא מקצוען ודובר אנגלית מעולה. והכי חשוב, הוא בן אדם מדהים! טיול עם אשד הוא חוויה שלא תשכחו.</p></div><div class="nh-stars" aria-label="5 כוכבים">★★★★★</div><p class="nh-who">משה ליאור<span> · באר שבע</span></p></div>
         <div class="nh-rev"><div class="nh-rq"><svg viewBox="0 0 24 24"><path d="M10 7H6a2 2 0 0 0-2 2v4h5v5H4M20 7h-4a2 2 0 0 0-2 2v4h5v5h-5"/></svg><p>אשד מדריך טיולים מעולה! <b>מקצועי, סבלני, ומלא ידע.</b> מעביר את ההדרכה בצורה מעניינת וחווייתית, עם יחס אישי ואווירה נהדרת.</p></div><div class="nh-stars" aria-label="5 כוכבים">★★★★★</div><p class="nh-who">משה רייך</p></div>
         <div class="nh-rev"><div class="nh-rq"><svg viewBox="0 0 24 24"><path d="M10 7H6a2 2 0 0 0-2 2v4h5v5H4M20 7h-4a2 2 0 0 0-2 2v4h5v5h-5"/></svg><p>הסיורים עם אשד היו עבורי חוויה מעניינת ומעשירה. <b>אשד הפגין מקצועיות, ידע רחב ויכולת מרשימה להעביר את התכנים בצורה נעימה ומרתקת.</b></p></div><div class="nh-stars" aria-label="5 כוכבים">★★★★★</div><p class="nh-who"><bdi>Dor Tzfanya</bdi></p></div>
+      </div>
       </div>
       <span class="nh-swipe" aria-hidden="true">← החליקו לעוד</span>
     </div>
@@ -856,6 +860,16 @@ n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,
 @media (prefers-reduced-motion:reduce){.nh-sticky{transition:none}}
 </style><div class="nh-sticky" id="nh-sticky"><a href="#contact">לפרטים והרשמה</a></div>
 <script>(function(){var b=document.getElementById("nh-sticky");if(!b||!("IntersectionObserver" in window))return;document.body.classList.add("nh-has-sticky");var hero=document.querySelector(".nh-hero"),ct=document.getElementById("contact"),hv=true,cv=false;function u(){b.classList.toggle("on",!hv&&!cv)}var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.target===hero)hv=e.isIntersecting;else cv=e.isIntersecting});u()},{threshold:0});hero&&o.observe(hero);ct&&o.observe(ct)})();</script>
+<style id="rev-carousel">
+.nh-revcar{position:relative}
+.nh-revs{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:6px}
+.nh-revs::-webkit-scrollbar{display:none}
+.nh-revs>*{flex:0 0 calc(50% - 10px);scroll-snap-align:start}
+.nh-revcar .car-btn{top:45%;transform:translateY(-50%)}
+.nh-revcar .car-btn.prev{right:-22px}.nh-revcar .car-btn.next{left:-22px}
+.nh-revcar .car-btn[disabled]{opacity:.35;cursor:default}
+@media (max-width:760px){.nh-revs>*{flex:0 0 84%;scroll-snap-align:center}}
+</style>
 <script id="anim-js">
 (function(){
   var top=document.querySelector('.top');
@@ -881,4 +895,11 @@ n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,
 </script>
 
 <script data-goatcounter="https://maslul-derech.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+<script>
+(function(){var c=document.querySelector('.nh-revcar');if(!c)return;var t=c.querySelector('.nh-revs'),pv=c.querySelector('.prev'),nx=c.querySelector('.next');
+function step(){var k=t.children[0];return k?k.getBoundingClientRect().width+20:300}
+function upd(){var x=Math.abs(t.scrollLeft),m=t.scrollWidth-t.clientWidth-2;pv.disabled=x<2;nx.disabled=x>=m}
+pv.onclick=function(){t.scrollBy({left:step()})};nx.onclick=function(){t.scrollBy({left:-step()})};
+t.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();})();
+</script>
 </body></html>
