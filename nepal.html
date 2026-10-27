@@ -1,13 +1,13 @@
 <!doctype html><html lang="he" data-theme="light"><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="stylesheet" href="site.css">
-<title>אל הלב של נפאל</title>
+<title>טיולים לנפאל</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="description" content="טיול מאורגן לנפאל באפריל 2027: קבוצת בוטיק לקהל בוגר, נופי ההימלאיה וחוויה שלא שוכחים. וגם ייעוץ ותכנון לטיול עצמאי.">
+<meta name="description" content="נפאל כמו שלא הכרתם: מסעות בוטיק מאורגנים לקהל בוגר, וגם ייעוץ ותכנון לטיול עצמאי. המסע הקרוב: מסע אל הלב של נפאל.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="מסלול ודרך">
 <meta property="og:locale" content="he_IL">
-<meta property="og:title" content="אל הלב של נפאל – מסלול ודרך">
-<meta property="og:description" content="טיול מאורגן לנפאל באפריל 2027: קבוצת בוטיק לקהל בוגר, נופי ההימלאיה וחוויה שלא שוכחים. וגם ייעוץ ותכנון לטיול עצמאי.">
+<meta property="og:title" content="טיולים לנפאל – מסלול ודרך">
+<meta property="og:description" content="נפאל כמו שלא הכרתם: מסעות בוטיק מאורגנים לקהל בוגר, וגם ייעוץ ותכנון לטיול עצמאי. המסע הקרוב: מסע אל הלב של נפאל.">
 <meta property="og:url" content="https://www.maslul-derech.co.il/nepal.html">
 <meta property="og:image" content="https://www.maslul-derech.co.il/share-nepal-hero.jpg">
 <meta property="og:image:width" content="1200">
@@ -199,6 +199,25 @@ section{padding-block:clamp(40px,5.5vw,72px)}
   nav>ul>li>a,.sub-btn{padding-block:9px!important}
   nav.more .nav-hint{display:block;position:sticky;bottom:0;margin-top:-40px;padding:22px 0 10px;text-align:center;font-weight:800;font-size:.85rem;color:var(--orange-ink);background:linear-gradient(rgba(255,255,255,0),var(--surface) 55%);pointer-events:none}
 }
+
+/* upcoming trips (27.10) */
+.trip{display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,40px);align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:clamp(22px,3.5vw,36px);margin-top:6px}
+.trip-emb{width:clamp(110px,14vw,150px);height:auto;border-radius:50%}
+.trip-txt{display:grid;gap:12px;min-width:0}
+.trip-kick{justify-self:start;font-size:.85rem;font-weight:800;color:#fff;background:var(--blue);padding:4px 12px;border-radius:999px}
+.trip h3{font-size:clamp(1.6rem,3vw,2.1rem)}
+.trip-meta{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px;font-weight:700;color:var(--orange-ink)}
+.trip-meta li+li::before{content:"·";margin-inline-end:18px;color:var(--muted)}
+.trip p{color:var(--muted)}
+.trip-more summary{cursor:pointer;font-weight:800;color:var(--navy);display:inline-flex;align-items:center;gap:8px}
+.trip-more summary::after{content:"▾";transition:transform .2s}
+.trip-more[open] summary::after{transform:rotate(180deg)}
+.trip-more .np-areas{margin-top:14px}
+.trip-next{display:grid;gap:4px;margin-top:18px;padding:18px 22px;border:2px dashed var(--line);border-radius:14px;text-decoration:none;color:inherit}
+.trip-next b{font-family:var(--display);font-size:1.2rem}
+.trip-next span{color:var(--orange-ink);font-weight:700}
+.trip-next:hover{border-color:var(--orange)}
+@media (max-width:640px){.trip{grid-template-columns:1fr;justify-items:center;text-align:center}.trip-txt{justify-items:center}.trip-kick{justify-self:center}.trip-meta,.trip .path,.trip .actions{justify-content:center}.trip-more .np-areas{text-align:right}.trip-meta{gap:6px}.trip-meta li{background:var(--band);border:1px solid var(--line);padding:3px 11px;border-radius:999px;font-size:.9rem}.trip-meta li+li::before{content:none}}
 </style>
 
 <!-- icons:start --><svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -261,7 +280,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
         <a href="https://www.instagram.com/maslul.derech/" aria-label="אינסטגרם"><svg><use href="#i-ig"/></svg></a>
         <a href="https://www.facebook.com/profile.php?id=61594315329066" aria-label="פייסבוק"><svg><use href="#i-fb"/></svg></a>
       </div>
-      <a class="btn btn-orange head-cta" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%95%D7%93%D7%A8%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%99%D7%95%D7%9C%20%D7%9C%D7%A0%D7%A4%D7%90%D7%9C%20%D7%91%D7%90%D7%A4%D7%A8%D7%99%D7%9C%202027.%0A%0A%D7%A9%D7%9D%3A%20%0A%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%9E%D7%98%D7%99%D7%99%D7%9C%D7%99%D7%9D%3A%20"><svg><use href="#i-wa"/></svg>ווטסאפ</a>
+      <a class="btn btn-orange head-cta" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%95%D7%93%D7%A8%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%99%D7%95%D7%9C%D7%99%D7%9D%20%D7%9C%D7%A0%D7%A4%D7%90%D7%9C.%0A%0A%D7%A9%D7%9D%3A%20%0A%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%9E%D7%98%D7%99%D7%99%D7%9C%D7%99%D7%9D%3A%20"><svg><use href="#i-wa"/></svg>ווטסאפ</a>
       <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav" aria-label="תפריט">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
@@ -274,29 +293,43 @@ section{padding-block:clamp(40px,5.5vw,72px)}
   <section class="hero s-hero photo-hero hs" style="padding:0;background-image:linear-gradient(90deg,rgba(6,20,51,0.05) 0,rgba(6,20,51,0.88) 62%),url('nepal-hero.jpg');background-position:left center">
     <div class="wrap">
       <span class="crumbs"><a href="index.html">בית</a> › נפאל</span>
-      <span class="eyebrow">טיול מאורגן · 31 במרץ – 11 באפריל 2027</span>
-      <h1>אל הלב <em>של נפאל</em></h1>
-      <p class="lead">אנשים, תרבות וטבע. חוויה מעולם אחר, בקבוצת בוטיק לקהל בוגר, ברמת הליכה קלה עד בינונית ובליווי צמוד שלי.</p>
+      <span class="eyebrow">מסעות מאורגנים · ייעוץ לטיול עצמאי</span>
+      <h1>נפאל, <em>חוויה מעולם אחר</em></h1>
+      <p class="lead">אנשים, תרבות וטבע. מסעות בקבוצות בוטיק לקהל בוגר, בקצב נינוח ובליווי צמוד שלי, וגם ייעוץ ותכנון למי שמעדיף לטייל לבד.</p>
       <div class="actions">
-        <a class="btn btn-orange" href="https://nepalheart.base44.app">לתוכנית המלאה ולהרשמה</a>
-        <a class="btn btn-line" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%95%D7%93%D7%A8%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%99%D7%95%D7%9C%20%D7%9C%D7%A0%D7%A4%D7%90%D7%9C%20%D7%91%D7%90%D7%A4%D7%A8%D7%99%D7%9C%202027.%0A%0A%D7%A9%D7%9D%3A%20%0A%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%9E%D7%98%D7%99%D7%99%D7%9C%D7%99%D7%9D%3A%20"><svg><use href="#i-wa"/></svg>לשאלות בווטסאפ</a>
+        <a class="btn btn-orange" href="#trips">לטיולים הקרובים</a>
+        <a class="btn btn-line" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%95%D7%93%D7%A8%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%99%D7%95%D7%9C%D7%99%D7%9D%20%D7%9C%D7%A0%D7%A4%D7%90%D7%9C.%0A%0A%D7%A9%D7%9D%3A%20%0A%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%9E%D7%98%D7%99%D7%99%D7%9C%D7%99%D7%9D%3A%20"><svg><use href="#i-wa"/></svg>לשאלות בווטסאפ</a>
       </div>
     </div>
   </section>
 
-  <section class="how">
+  <section class="how" id="trips" style="scroll-margin-top:80px">
     <div class="wrap">
-      <div class="how-txt np-areas">
-        <div class="sec-head" style="margin-bottom:8px">
-          <span class="eyebrow">המסע</span>
-          <h2>מהמקדשים אל ההימלאיה</h2>
-        </div>
-        <div class="pt"><b>קטמנדו ועמק קטמנדו</b><p>מקדש הקופים, פשופטינאת' ובודנאת', הכיכרות העתיקות של פטן ובהקטפור.</p></div>
-        <div class="pt"><b>נגרקוט</b><p>זריחה מול רכס ההימלאיה, בלי טרק ובלי תרמיל.</p></div>
-        <div class="pt"><b>צ'יטואן</b><p>שני לילות בג'ונגל של דרום נפאל.</p></div>
-        <div class="pt"><b>פוקהרה</b><p>זריחה בסרנגקוט, שייט באגם פווה ונוף ישיר אל פסגות האנאפורנה.</p></div>
+      <div class="sec-head">
+        <span class="eyebrow">הטיולים הקרובים</span>
+        <h2>יוצאים לנפאל</h2>
       </div>
-      
+      <article class="trip">
+        <img class="trip-emb" src="nepal-emblem.png" alt="סמל המסע: מסע אל הלב של נפאל 2027" width="140" height="140" loading="lazy">
+        <div class="trip-txt">
+          <span class="trip-kick">קבוצת המייסדים · המסע הראשון</span>
+          <h3>מסע אל הלב של נפאל</h3>
+          <ul class="trip-meta"><li>11 ימים</li><li>התאריכים יפורסמו בקרוב</li><li>עד 20 משתתפים</li><li>רמת הליכה קלה-בינונית</li></ul>
+          <ol class="path"><li><span>קטמנדו</span></li><li><span>צ'יטואן</span></li><li><span>פוקהרה</span></li><li><span>נגרקוט</span></li></ol>
+          <p>מהמקדשים של עמק קטמנדו, דרך הג'ונגל של צ'יטואן ואגמי פוקהרה, ועד זריחה מול ההימלאיה. קבוצת בוטיק לקהל בוגר, במלונות 4-5 כוכבים ובליווי צמוד שלי.</p>
+          <details class="trip-more">
+            <summary>עוד על המסע</summary>
+            <div class="np-areas">
+              <div class="pt"><b>קטמנדו ועמק קטמנדו</b><p>פטן ובודנאת', פשופטינאת' וטקס האראטי, הכפר העתיק קירטיפור ומקדש הקופים.</p></div>
+              <div class="pt"><b>צ'יטואן</b><p>שני לילות בג'ונגל של דרום נפאל: כפר שבט התארו, הליכת ג'ונגל וספארי ג'יפים.</p></div>
+              <div class="pt"><b>פוקהרה</b><p>זריחה בסרנגקוט, שייט באגם פווה ונוף ישיר אל פסגות האנאפורנה.</p></div>
+              <div class="pt"><b>בהאקטפור ונגרקוט</b><p>עיר המקדשים העתיקה, ותצפית מול רכס ההימלאיה, בלי טרק ובלי תרמיל.</p></div>
+            </div>
+          </details>
+          <div class="actions"><a class="btn btn-orange" href="nepal-heart.html">לכל פרטי המסע וההרשמה</a></div>
+        </div>
+      </article>
+      <a class="trip-next" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F/%D7%94%20%D7%A2%D7%9C%20%D7%94%D7%9E%D7%A1%D7%A2%D7%95%D7%AA%20%D7%94%D7%91%D7%90%D7%99%D7%9D%20%D7%9C%D7%A0%D7%A4%D7%90%D7%9C.%0A%0A%D7%A9%D7%9D%3A%20"><b>המסע הבא כבר בתכנון</b><span>רוצים לשמוע עליו ראשונים? כתבו לי בווטסאפ ←</span></a>
     </div>
   </section>
 
@@ -308,13 +341,10 @@ section{padding-block:clamp(40px,5.5vw,72px)}
       </div>
       <div class="car">
         <button class="car-btn prev" aria-label="הקודם">‹</button>
-        <div class="car-track" tabindex="0"><figure class="slide vid"><video controls playsinline preload="none" poster="nepal-boutique.jpg"><source src="nepal-boutique.mp4" type="video/mp4"></video><figcaption>נפאל, בלי תרמיל ובלי לחץ</figcaption></figure>
-          <figure class="slide"><img src="nepal-pashupatinath.jpg" alt="פשופטינאת', קטמנדו" loading="lazy"><figcaption>פשופטינאת', קטמנדו</figcaption></figure>
+        <div class="car-track" tabindex="0"><figure class="slide"><img src="nepal-pashupatinath.jpg" alt="פשופטינאת', קטמנדו" loading="lazy"><figcaption>פשופטינאת', קטמנדו</figcaption></figure>
           <figure class="slide"><img src="nepal-wheel.jpg" alt="גלגל תפילה" loading="lazy"><figcaption>גלגל תפילה</figcaption></figure>
-          <figure class="slide vid"><video controls playsinline preload="none" poster="nepal-welcome.jpg"><source src="nepal-welcome.mp4" type="video/mp4"></video><figcaption>ככה מקבלים אתכם בנפאל</figcaption></figure>
           <figure class="slide"><img src="nepal-phewa.jpg" alt="אגם פווה, פוקהרה" loading="lazy"><figcaption>אגם פווה, פוקהרה</figcaption></figure>
           <figure class="slide"><img src="nepal-sunrise.jpg" alt="זריחה בסרנגקוט" loading="lazy"><figcaption>זריחה בסרנגקוט</figcaption></figure>
-          <figure class="slide vid"><video controls playsinline preload="none" poster="nepal-himalaya.jpg"><source src="nepal-himalaya.mp4" type="video/mp4"></video><figcaption>ההימלאיה מול העיניים</figcaption></figure>
           <figure class="slide"><img src="nepal-women.jpg" alt="מפגש בדרך" loading="lazy"><figcaption>מפגש בדרך</figcaption></figure><figure class="slide"><img src="nepal-village.jpg" alt="כפר הררי" loading="lazy"><figcaption>כפר בהרים</figcaption></figure></div>
         <button class="car-btn next" aria-label="הבא">›</button>
       </div></div>
@@ -329,7 +359,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
         <h2>אשד נבו</h2>
         <p>מורה דרך מוסמך, מדריך בעברית ובאנגלית. הטיול נבנה אחרי למידה והכנה יסודית, בתיאום עם הגורמים בנפאל. לאורך כל הדרך מצטרף מדריך מקומי דובר אנגלית, ואני מלווה ומתרגם.</p>
         <div class="actions">
-          <a class="btn btn-orange" href="https://nepalheart.base44.app">לתוכנית המלאה ולהרשמה</a>
+          <a class="btn btn-orange" href="nepal-heart.html">לפרטי המסע הקרוב</a>
         </div>
       </div>
     </div>
@@ -354,10 +384,10 @@ section{padding-block:clamp(40px,5.5vw,72px)}
     <div class="wrap">
       <span class="eyebrow" style="color:var(--orange-ink)">בואו נתכנן</span>
       <h2>רוצים להצטרף למסע?</h2>
-      <p>כל הפרטים, התוכנית יום אחר יום וההרשמה נמצאים בדף הטיול. לשאלות אני זמין בווטסאפ.</p>
+      <p>כל הפרטים, התוכנית יום אחר יום וההרשמה נמצאים בדף המסע. לשאלות אני זמין בווטסאפ.</p>
       <div class="actions">
-        <a class="btn btn-orange" href="https://nepalheart.base44.app">לדף הטיול</a>
-        <a class="btn btn-line-dark" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%95%D7%93%D7%A8%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%99%D7%95%D7%9C%20%D7%9C%D7%A0%D7%A4%D7%90%D7%9C%20%D7%91%D7%90%D7%A4%D7%A8%D7%99%D7%9C%202027.%0A%0A%D7%A9%D7%9D%3A%20%0A%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%9E%D7%98%D7%99%D7%99%D7%9C%D7%99%D7%9D%3A%20"><svg><use href="#i-wa"/></svg>ווטסאפ 052-945-6936</a>
+        <a class="btn btn-orange" href="nepal-heart.html">לדף המסע</a>
+        <a class="btn btn-line-dark" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%95%D7%93%D7%A8%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%99%D7%95%D7%9C%D7%99%D7%9D%20%D7%9C%D7%A0%D7%A4%D7%90%D7%9C.%0A%0A%D7%A9%D7%9D%3A%20%0A%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%9E%D7%98%D7%99%D7%99%D7%9C%D7%99%D7%9D%3A%20"><svg><use href="#i-wa"/></svg>ווטסאפ 052-945-6936</a>
       </div>
     </div>
   </section>
@@ -380,7 +410,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
   </div>
 </footer><!-- footer:end -->
 
-<a class="wa-float" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%95%D7%93%D7%A8%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%99%D7%95%D7%9C%20%D7%9C%D7%A0%D7%A4%D7%90%D7%9C%20%D7%91%D7%90%D7%A4%D7%A8%D7%99%D7%9C%202027.%0A%0A%D7%A9%D7%9D%3A%20%0A%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%9E%D7%98%D7%99%D7%99%D7%9C%D7%99%D7%9D%3A%20" aria-label="ווטסאפ" style="color:#fff"><svg><use href="#i-wa"/></svg></a>
+<a class="wa-float" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%95%D7%93%D7%A8%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%98%D7%99%D7%95%D7%9C%D7%99%D7%9D%20%D7%9C%D7%A0%D7%A4%D7%90%D7%9C.%0A%0A%D7%A9%D7%9D%3A%20%0A%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%9E%D7%98%D7%99%D7%99%D7%9C%D7%99%D7%9D%3A%20" aria-label="ווטסאפ" style="color:#fff"><svg><use href="#i-wa"/></svg></a>
 
 <script>
 (function(){
