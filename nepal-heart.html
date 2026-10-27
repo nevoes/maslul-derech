@@ -231,7 +231,8 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 .nh-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse at center,rgba(26,23,20,.52) 0%,rgba(26,23,20,.22) 50%,rgba(26,23,20,.08) 78%)}
 .nh-emblem{position:absolute;top:24px;inset-inline-start:24px;width:clamp(80px,9vw,96px);height:auto;border-radius:50%;box-shadow:0 0 0 4px rgba(255,255,255,.25),0 0 0 5px rgba(255,255,255,.4);z-index:2}
 .nh-hero-in{position:relative;z-index:2;max-width:1024px;text-align:center;color:#fff;padding-block:112px 64px}
-.nh-founders{display:inline-block;font-size:1.05rem;font-weight:800;letter-spacing:.02em;padding:7px 18px;border-radius:999px;background:var(--robe);color:#0A2A66;box-shadow:0 6px 18px -6px rgba(0,0,0,.45)}
+@media (max-width:560px){.nh-f-sep{display:none}.nh-f2{display:block}}
+.nh-founders{display:inline-block;line-height:1.45;font-size:1.05rem;font-weight:800;letter-spacing:.02em;padding:7px 18px;border-radius:999px;background:var(--robe);color:#0A2A66;box-shadow:0 6px 18px -6px rgba(0,0,0,.45)}
 .nh-hero h1{font-size:clamp(3rem,7vw,4.5rem);font-weight:700;line-height:1.12;margin-top:16px;text-wrap:balance;text-shadow:0 2px 18px rgba(0,0,0,.35)}
 .nh-bar{display:block;width:112px;height:8px;border-radius:999px;background:var(--robe);margin:20px auto 0}
 .nh-hero-lead{margin:24px auto 0;max-width:768px;font-size:clamp(1.25rem,2.2vw,1.6rem);line-height:1.55;font-weight:500;text-shadow:0 1px 10px rgba(0,0,0,.35)}
@@ -500,7 +501,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
   <section class="nh-hero" style="background-image:url('nepal-valley-autumn.jpg')">
     <img class="nh-emblem" src="nepal-emblem.png" alt="סמל המסע: מסע אל הלב של נפאל 2027" width="120" height="120">
     <div class="wrap nh-hero-in">
-      <span class="nh-founders">רישום המתעניינים החל!</span>
+      <span class="nh-founders">מחזור ראשון יוצא לדרך<span class="nh-f-sep"> · </span><span class="nh-f2">רישום המתעניינים החל!</span></span>
       <h1>מסע אל הלב של נפאל</h1>
       <span class="nh-bar" aria-hidden="true"></span>
       <p class="nh-hero-lead">נמסטה. בואו איתי למסע "אל הלב של נפאל" – חוויה גיאוגרפית ותרבותית עמוקה שנבנתה במיוחד עבור קהל בוגר, בקצב נינוח ובתנאי פרימיום.</p>
@@ -722,10 +723,9 @@ section{padding-block:clamp(40px,5.5vw,72px)}
         <span class="nh-rule"></span>
       </div>
       <div class="nh-about-txt">
-        <p>שלום ונמסטה, אני אשד נבו, מורה דרך מוסמך בעברית ובאנגלית, בעל תואר שני בניהול תיירות ופנאי מאוניברסיטת בן־גוריון.</p>
-        <p class="nh-soft">אוהב אנשים, ידע וטיולים, והכי אוהב לשלב בין שלושתם כדי ליצור חוויה משמעותית. נשוי לשרית ואב לכרמל ויואב.</p>
-        <p class="nh-first">זהו מחזור הבכורה של המסע, ובזכות זה הוא מקבל ממני הכול: חודשים של למידה והכנה, תיאום אישי של כל פרט בשטח, וקבוצה קטנה שאני מכיר אחד־אחד.</p>
-        <p>מזמין אתכם להכיר ביחד את הלב של נפאל.</p>
+        <p>שלום ונמסטה, אני אשד נבו, מורה דרך מוסמך ובעל תואר שני בניהול תיירות ופנאי. נשוי לשרית ואב לכרמל ויואב.</p>
+        <p class="nh-first">בכל טיול שאני מוביל אני משקיע בכל פרט, וכך גם כאן: הכנה יסודית, תיאום אישי בשטח, וקבוצה קטנה שאני מכיר אחד־אחד.</p>
+        <p>מזמין אתכם להכיר איתי את הלב של נפאל.</p>
       </div>
     </div>
   </section>
