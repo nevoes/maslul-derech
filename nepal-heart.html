@@ -297,6 +297,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 .nh-slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .45s}
 .nh-slide.on{opacity:1;visibility:visible}
 .nh-slide img,.nh-slide video{width:100%;height:100%;object-fit:contain;display:block;background:var(--ink)}
+.nh-note{position:absolute;top:12px;right:12px;max-width:calc(100% - 90px);z-index:3;font-size:.8rem;font-weight:600;line-height:1.35;color:#fff;background:rgba(10,42,102,.82);padding:5px 12px;border-radius:12px}
 .nh-gbtn{position:absolute;top:50%;translate:0 -50%;width:42px;height:42px;border-radius:50%;border:0;background:rgba(26,28,30,.55);backdrop-filter:blur(10px);color:#fff;display:grid;place-items:center;cursor:pointer;z-index:3}
 .nh-gbtn:hover{background:rgba(0,0,0,.72)}
 .nh-gprev{right:10px}.nh-gnext{left:10px}
@@ -581,7 +582,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
       </div>
       <div class="nh-gal" id="nhGal">
         <div class="nh-stage">
-          <figure class="nh-slide on"><video controls playsinline preload="none" poster="nepal-welcome-short.jpg"><source src="nepal-welcome-short.mp4" type="video/mp4"></video></figure>
+          <figure class="nh-slide on"><video controls playsinline preload="none" poster="nepal-welcome-short.jpg"><source src="nepal-welcome-short.mp4" type="video/mp4"></video><figcaption class="nh-note">מהסיור המקדים · התאריכים בסרטון השתנו</figcaption></figure>
           <figure class="nh-slide"><video controls playsinline preload="none" poster="nepal-boutique.jpg"><source src="nepal-boutique.mp4" type="video/mp4"></video></figure>
           <figure class="nh-slide"><video controls playsinline preload="none" poster="nepal-himalaya.jpg"><source src="nepal-himalaya.mp4" type="video/mp4"></video></figure>
           <figure class="nh-slide"><img src="nepal-boats.jpg" alt="סירות צבעוניות עוגנות באגם מול הרים מעורפלים" loading="lazy"></figure>
