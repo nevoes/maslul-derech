@@ -549,7 +549,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
       </div>
       <div class="nh-gal" id="nhGal">
         <div class="nh-stage">
-          <figure class="nh-slide on"><video controls playsinline preload="none" poster="nepal-welcome-short.webp"><source src="nepal-welcome-short.mp4" type="video/mp4"></video><figcaption class="nh-note">מהסיור המקדים · התאריכים בסרטון השתנו</figcaption></figure>
+          <figure class="nh-slide on"><video controls playsinline preload="none" poster="nepal-welcome-short.webp"><source src="nepal-welcome-short.mp4" type="video/mp4"></video></figure>
           <figure class="nh-slide"><video controls playsinline preload="none" poster="nepal-boutique.webp"><source src="nepal-boutique.mp4" type="video/mp4"></video></figure>
           <figure class="nh-slide"><video controls playsinline preload="none" poster="nepal-himalaya.webp"><source src="nepal-himalaya.mp4" type="video/mp4"></video></figure>
           <figure class="nh-slide"><img src="nepal-boats.jpg" srcset="nepal-boats-800.webp 800w, nepal-boats.webp 1400w" alt="סירות צבעוניות עוגנות באגם מול הרים מעורפלים" loading="lazy"></figure>
@@ -806,7 +806,8 @@ n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,
   var g=document.getElementById('nhGal');if(g){
     var s=g.querySelectorAll('.nh-slide'),c=g.querySelector('.nh-gcount'),dots=g.querySelector('.nh-dots'),i=0;
     s.forEach(function(_,k){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','שקופית '+(k+1));b.addEventListener('click',function(){go(k);});dots.appendChild(b);});
-    function go(n){var v=s[i].querySelector('video');if(v)v.pause();s[i].classList.remove('on');i=(n+s.length)%s.length;s[i].classList.add('on');c.textContent=(i+1)+' / '+s.length;dots.querySelectorAll('button').forEach(function(b,k){b.setAttribute('aria-current',k===i?'true':'false');});}
+    function bg(f){if(f.querySelector('.nh-gbg'))return;var m=f.querySelector('video'),u=m?m.getAttribute('poster'):'';if(!m){var im=f.querySelector('img'),ss=im.getAttribute('srcset');u=ss?ss.split(' ')[0]:im.getAttribute('src');}if(!u)return;var d=document.createElement('div');d.className='nh-gbg';d.setAttribute('aria-hidden','true');d.style.backgroundImage="url('"+u+"')";f.insertBefore(d,f.firstChild);}
+    function go(n){var v=s[i].querySelector('video');if(v)v.pause();s[i].classList.remove('on');i=(n+s.length)%s.length;s[i].classList.add('on');bg(s[i]);c.textContent=(i+1)+' / '+s.length;dots.querySelectorAll('button').forEach(function(b,k){b.setAttribute('aria-current',k===i?'true':'false');});}
     g.querySelector('.nh-gprev').addEventListener('click',function(){go(i-1);});
     g.querySelector('.nh-gnext').addEventListener('click',function(){go(i+1);});
     var x0=null;g.querySelector('.nh-stage').addEventListener('touchstart',function(e){x0=e.touches[0].clientX;},{passive:true});
@@ -901,4 +902,15 @@ function upd(){var x=Math.abs(t.scrollLeft),m=t.scrollWidth-t.clientWidth-2;pv.d
 pv.onclick=function(){t.scrollBy({left:step()})};nx.onclick=function(){t.scrollBy({left:-step()})};
 t.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);upd();})();
 </script>
+<style id="gal-clean">
+.nh-stage{background:#0d1b33}
+.nh-slide{overflow:hidden}
+.nh-gbg{position:absolute;inset:-30px;background:center/cover no-repeat;filter:blur(22px) brightness(.55) saturate(1.1);transform:scale(1.05)}
+.nh-slide img,.nh-slide video{position:relative;background:transparent!important}
+.nh-gcount{display:none}
+.nh-gbtn{width:36px;height:36px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35)}
+.nh-gbtn svg{width:18px!important;height:18px!important}
+.nh-gprev{right:8px}.nh-gnext{left:8px}
+@media (max-width:760px){.nh-stage{aspect-ratio:4/5}}
+</style>
 </body></html>
