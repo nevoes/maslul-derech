@@ -242,7 +242,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
 
 
 <main id="main" class="themed">
-  <section class="hero s-hero photo-hero hs" style="padding:0;background-image:linear-gradient(90deg,rgba(6,30,60,0.05) 0,rgba(6,30,60,0.88) 62%),url('groups-masada.jpg');background-position:left center">
+  <section class="hero s-hero photo-hero hs" style="padding:0;background-image:linear-gradient(90deg,rgba(6,30,60,0.05) 0,rgba(6,30,60,0.88) 62%),url('groups-masada.webp');background-position:left center">
     <div class="wrap">
       <span class="crumbs"><a href="index.html">בית</a> › <a href="index.html#trips">הטיולים שלנו</a> › ועדים, מורים וחברים</span>
       <span class="eyebrow">ועדי עובדים · צוותי הוראה · קבוצות חברים</span>
@@ -267,9 +267,9 @@ section{padding-block:clamp(40px,5.5vw,72px)}
         <div class="pt"><b>כתובת אחת</b><p>אני מתכנן ומוביל בעצמי, מהפנייה הראשונה ועד סוף היום.</p></div>
       </div>
       <div class="mosaic">
-        <figure class="big"><img src="groups-hero.jpg" alt="אשד עם צוות מורים באגמון החולה" loading="lazy"></figure>
-        <figure><img src="groups-kinneret.jpg" alt="קבוצת מטיילים על חוף הכנרת" loading="lazy"></figure>
-        <figure><img src="groups-cave.jpg" alt="צוות מורים בהדרכה במערת קולומבריום" loading="lazy" style="object-position:center 60%"></figure>
+        <figure class="big"><img src="groups-hero.jpg" srcset="groups-hero-800.webp 800w, groups-hero.webp 1400w" alt="אשד עם צוות מורים באגמון החולה" loading="lazy"></figure>
+        <figure><img src="groups-kinneret.jpg" srcset="groups-kinneret-800.webp 800w, groups-kinneret.webp 1400w" alt="קבוצת מטיילים על חוף הכנרת" loading="lazy"></figure>
+        <figure><img src="groups-cave.jpg" srcset="groups-cave.webp 788w" alt="צוות מורים בהדרכה במערת קולומבריום" loading="lazy" style="object-position:center 60%"></figure>
       </div>
     </div>
   </section>
@@ -297,7 +297,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
       </div>
       <div class="flag" style="grid-template-columns:repeat(2,minmax(0,1fr))">
         <a class="fl" href="tanach-tashach.html#r1">
-          <img class="fl-img" src="yitzpor-eshed.jpg" alt="אשד בשביל נחל יצפור מעל העמק" loading="lazy" style="object-position:center">
+          <img class="fl-img" src="yitzpor-eshed.jpg" srcset="yitzpor-eshed-800.webp 800w, yitzpor-eshed.jpg 1400w" alt="אשד בשביל נחל יצפור מעל העמק" loading="lazy" style="object-position:center">
           <div class="txt">
             <span class="lvl l2">מאתגר יותר</span>
             <h3>נחל יצפור</h3>
@@ -306,7 +306,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
           </div>
         </a>
         <a class="fl" href="https://wa.me/972529456936?text=%D7%A9%D7%9C%D7%95%D7%9D%20%D7%90%D7%A9%D7%93%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%90%D7%AA%D7%A8%20%D7%9E%D7%A1%D7%9C%D7%95%D7%9C%20%D7%95%D7%93%D7%A8%D7%9A%20%D7%95%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%98%D7%99%D7%95%D7%9C%20%D7%9C%D7%95%D7%95%D7%A2%D7%93%20%2F%20%D7%A6%D7%95%D7%95%D7%AA%20%2F%20%D7%A7%D7%91%D7%95%D7%A6%D7%AA%20%D7%97%D7%91%D7%A8%D7%99%D7%9D.%0A%0A%D7%A1%D7%95%D7%92%20%D7%94%D7%A7%D7%91%D7%95%D7%A6%D7%94%3A%20%0A%D7%9E%D7%A1%D7%A4%D7%A8%20%D7%9E%D7%A9%D7%AA%D7%AA%D7%A4%D7%99%D7%9D%3A%20%0A%D7%AA%D7%90%D7%A8%D7%99%D7%9A%20%D7%9E%D7%A9%D7%95%D7%A2%D7%A8%3A%20">
-          <img class="fl-img" src="iris-field2.jpg" alt="אירוסים בפריחה" loading="lazy" style="object-position:center 35%">
+          <img class="fl-img" src="iris-field2.jpg" srcset="iris-field2-800.webp 800w, iris-field2.webp 1050w" alt="אירוסים בפריחה" loading="lazy" style="object-position:center 35%">
           <div class="txt">
             <span class="lvl l1">ועוד באזור</span>
             <h3>תצפיות, פריחה וציפורים</h3>
@@ -376,7 +376,7 @@ if(mb){new MutationObserver(function(){document.body.classList.toggle('menu-open
 function u(){n.classList.toggle('more',!n.hidden&&n.scrollHeight-n.scrollTop-n.clientHeight>8);}
 n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,{attributes:true,subtree:true,attributeFilter:['class','hidden']});window.addEventListener('resize',u);u();})();
 </script>
-<style id="hero-shade">@media (max-width:820px){.hero.hs{background-image:linear-gradient(90deg,rgba(6,30,60,0.4) 0,rgba(6,30,60,0.92) 70%),url('groups-masada.jpg')!important}}</style>
+<style id="hero-shade">@media (max-width:820px){.hero.hs{background-image:linear-gradient(90deg,rgba(6,30,60,0.4) 0,rgba(6,30,60,0.92) 70%),url('groups-masada.webp')!important}}</style>
 <style id="mobile-type">@media (max-width:820px){html{font-size:109%}.tag,.ai-tag,.hot,.lvl,.kicker,.aud-chip,.sub b,.f-photo,.credit{font-size:.8rem!important}.meta li,.eg small,.g-badge small,.sub small,.post small,.ph span,.hero-ph,.eyebrow,.card-fig figcaption,.night-trio figcaption,.reel figcaption,.rows .k,.preview b,.crumbs,.facts small,.story .where,.sub-btn span,nav.more .nav-hint{font-size:.85rem!important}}</style><style id="type-scale">@media (max-width:820px){h1{font-size:2.064rem!important}h2{font-size:1.606rem!important}.cform h2,.direct h2{font-size:1.4rem!important}.about-box h2{font-size:1.5rem!important}h3{font-size:1.261rem!important}body,.fl p,.card p,p.lead{font-size:1.118rem!important}}</style><style id="footer-fix">.f-name{display:grid;gap:3px;line-height:1.5}.f-name b{color:#E2E7F0;font-weight:600}@media (max-width:820px){footer.site .wrap{flex-direction:column;align-items:center;gap:14px;padding-block:22px 30px}footer.site .f-brand{flex-direction:column;gap:10px;text-align:center}footer.site .f-brand img{height:84px}footer.site .f-name{font-size:.88rem;line-height:1.4;justify-items:center}}</style><script id="anim-js">
 (function(){
   var top=document.querySelector('.top');
