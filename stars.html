@@ -114,6 +114,13 @@ radial-gradient(ellipse at 70% 120%,rgba(122,60,200,.35),transparent 60%)}
 .night-trio figcaption{position:absolute;bottom:8px;inset-inline-start:10px;color:#fff;font-size:.75rem;text-shadow:0 1px 3px rgba(0,0,0,.8)}
 .trio-cap{text-align:center;color:var(--muted);margin-top:10px}
 @media (max-width:600px){.night-trio{grid-template-columns:1fr 1fr}.night-trio figure:first-child{grid-column:1/-1}.night-trio figure:first-child img{aspect-ratio:4/3}}
+.uv{display:grid;grid-template-columns:minmax(0,460px) minmax(0,1fr);gap:40px;align-items:center;max-width:980px;margin-inline:auto;background:#0A2A66;color:#fff;border-radius:18px;padding:28px}
+.uv figure{margin:0}
+.uv img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:14px;display:block}
+.uv .eyebrow{color:#F7830A}
+.uv h2{color:#fff;margin:.2em 0 .4em}
+.uv p{color:#E2E7F0;margin:0}
+@media (max-width:760px){.uv{grid-template-columns:1fr;gap:18px;padding:16px 16px 22px}}
 /*fixov*/
 .feature>*,.fl>*{min-width:0}
 .fl .txt{flex:1 1 0;min-width:0}
@@ -253,6 +260,19 @@ radial-gradient(ellipse at 70% 120%,rgba(122,60,200,.35),transparent 60%)}
   <section style="padding-bottom:0">
     <div class="wrap">
       <div class="night-trio"><figure><img src="stars-path-sunset.jpg" srcset="stars-path-sunset.webp 853w" alt="שביל בשקיעה, רגע לפני תצפית הכוכבים" loading="lazy"><figcaption>צילום: שרית נבו</figcaption></figure><figure><img src="reeds-sunset.jpg" srcset="reeds-sunset-800.webp 800w, reeds-sunset.webp 1226w" alt="שקיעה מבעד לקנים" loading="lazy"></figure><figure><img src="night-tree.jpg" srcset="night-tree-800.webp 800w, night-tree.jpg 1049w" alt="עץ בפריחה בחושך" loading="lazy"></figure></div><p class="trio-cap">רגע לפני שהכוכבים יוצאים</p>
+    </div>
+  </section>
+
+  <section style="padding-bottom:0">
+    <div class="wrap">
+      <div class="uv">
+        <figure><img src="stars-scorpion-uv.jpg" srcset="stars-scorpion-uv-800.webp 800w, stars-scorpion-uv.jpg 1050w" sizes="(max-width:760px) 100vw, 460px" alt="עקרב זוהר בירוק באור פנס אולטרה סגול, בין עשבים יבשים" loading="lazy"></figure>
+        <div class="uv-txt">
+          <span class="eyebrow">באור סגול</span>
+          <h2>ואז מדליקים את הפנס</h2>
+          <p>עקרב שאי אפשר לראות בחושך מתחיל פתאום לזהור בירוק. רגע שקטנים וגדולים זוכרים עוד הרבה זמן.</p>
+        </div>
+      </div>
     </div>
   </section>
 
