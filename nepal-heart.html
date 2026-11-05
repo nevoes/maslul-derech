@@ -731,7 +731,7 @@ section{padding-block:clamp(40px,5.5vw,72px)}
         <h2>הלב של נפאל מחכה לכם</h2>
         <p class="nh-contact-lead">עד 20 משתתפים בלבד. השאירו פרטים ותקבלו את התכנית המלאה.</p>
       </div>
-      <form class="nh-form" id="nhForm" action="https://formsubmit.co/ajax/maslul.derech@gmail.com" method="POST" novalidate>
+      <form class="nh-form" id="nhForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeJqJpweeKuT-y9kIGgg2SymaKcrhbCR5slI5-AiNUnn4qKhg/formResponse" method="POST" novalidate>
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
         <label class="nh-f-lapis">שם מלא<input name="entry.54258925" required autocomplete="name" placeholder="שמכם"></label>
         <label class="nh-f-green">טלפון / ווטסאפ<input name="entry.424857066" type="tel" required autocomplete="tel" dir="ltr" placeholder="מספר הטלפון שלכם"></label>
@@ -814,7 +814,7 @@ n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,
     g.querySelector('.nh-stage').addEventListener('touchend',function(e){if(x0===null)return;var dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>45)go(dx>0?i+1:i-1);x0=null;});
     go(0);
   }
-  /* form: emails the details directly via FormSubmit (no Google Form) */
+  /* form: posts to the Google Form "אל הלב של נפאל – השארת פרטים" (fields: see claude/nepal-form.md) */
   var f=document.getElementById('nhForm'),m=document.getElementById('nhMsg');if(!f)return;
   function wa(){var t='היי אשד, הגעתי מדף "מסע אל הלב של נפאל".\n';f.querySelectorAll('label').forEach(function(l){var el=l.querySelector('input,select,textarea');if(el&&el.value)t+=l.firstChild.textContent.trim()+': '+el.value+'\n';});return 'https://wa.me/972529456936?text='+encodeURIComponent(t);}
   f.addEventListener('submit',function(e){
@@ -822,11 +822,8 @@ n.addEventListener('scroll',u,{passive:true});new MutationObserver(u).observe(n,
     var bad=[].filter.call(f.querySelectorAll('[required]'),function(el){return !el.checkValidity();});
     if(bad.length){m.hidden=false;m.className='nh-msg err';m.textContent='נא למלא שם, טלפון וכתובת מייל תקינה.';bad[0].focus();return;}
     var b=f.querySelector('.nh-submit'),bt=b.innerHTML;b.disabled=true;b.textContent='שולח...';
-    var nm=f.querySelector('[name^="entry."]'),d={_template:'box',_captcha:'false'};
-    f.querySelectorAll('label').forEach(function(l){var el=l.querySelector('[name^="entry."]');if(el&&el.value.trim())d[l.firstChild.textContent.trim()]=el.value.trim();});
-    d._subject='פנייה חדשה מדף נפאל: '+(nm?nm.value.trim():'');
-    fetch(f.action,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(d)})
-    .then(function(r){return r.json().then(function(j){if(!r.ok||String(j.success)!=='true')throw 0;});})
+    var d=new URLSearchParams();f.querySelectorAll('[name^="entry."]').forEach(function(el){if(el.value.trim())d.append(el.name,el.value.trim());});
+    fetch(f.action,{method:'POST',mode:'no-cors',body:d})
     .then(function(){m.hidden=false;m.className='nh-msg ok';m.textContent='תודה! קיבלתי את הפרטים ואחזור אליכם בהקדם. אשד';f.reset();})
     .catch(function(){m.hidden=false;m.className='nh-msg err';m.innerHTML='השליחה לא הצליחה. אפשר לשלוח את אותם פרטים <a href="'+wa()+'" target="_blank" rel="noopener">בווטסאפ בלחיצה אחת</a>.';})
     .finally(function(){b.disabled=false;b.innerHTML=bt;});
