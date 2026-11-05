@@ -13,7 +13,7 @@ Copy an existing Hebrew page (it already has the markers and the `site.css` link
 ## Already in place – keep when editing
 - Skip link `<a class="skip" href="#main">` right after `<body>` and `id="main"` on `<main>`.
 - GoatCounter script before `</body>` (`maslul-derech.goatcounter.com`).
-- Contact form (`contact.html`) emails the details directly via FormSubmit (ajax, to maslul.derech@gmail.com) — no Google Form. The Nepal page form (`nepal-heart.html`) still posts to a Google Form.
+- Contact form (`contact.html`) posts to a Google Form; field IDs are in the script under the form.
 - Accessibility statement: `accessibility.html`, small link under the footer icons. Keep text contrast at WCAG AA (e.g. `--orange-ink` is `#A85200` for that reason).
 - Canonical / og:url always use `https://www.maslul-derech.co.il/...`.
 
