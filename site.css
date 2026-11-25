@@ -210,3 +210,5 @@ footer.site .social a{background:transparent;border-color:#33415F;color:#E2E7F0}
 .wa-float svg{width:30px;height:30px}
 @media (max-width:700px){.wa-float{display:flex}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* width/height on <img> only reserve space; CSS (aspect-ratio etc.) decides the shown size */
+:where(img[width][height]){height:auto}
